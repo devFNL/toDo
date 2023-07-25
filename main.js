@@ -25,6 +25,12 @@ function insertItem(taskText) {
   newItem.className = "list-group-item custom-item";
   newItem.textContent = taskText;
   list.querySelector("ul").appendChild(newItem);
+  newItem.addEventListener("click", function () {
+    this.style.opacity = 0;
+    setTimeout(() => {
+      this.remove();
+    }, 200);
+  });
 }
 
 const isDarkMode = localStorage.getItem("darkMode") === "true" || false;

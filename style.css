@@ -5,13 +5,17 @@ body {
   font-family: "Open Sans", sans-serif;
   font-family: "Roboto", sans-serif;
 }
+
 body.dark-mode {
   background-color: #303136;
   color: #f4f4f5;
 }
+
 .list-group-item {
   background-color: #f4f4f5;
   color: #303136;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
 }
 
 .dark-mode .list-group-item {
