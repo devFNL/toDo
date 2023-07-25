@@ -49,3 +49,11 @@ function updateDarkMode(isDarkMode) {
 document
   .getElementById("darkModeToggle")
   .addEventListener("change", toggleDarkMode);
+
+function setInitialMode() {
+  const isDarkMode = localStorage.getItem("darkMode") === "true" || false;
+  document.getElementById("darkModeToggle").checked = isDarkMode;
+  updateDarkMode(isDarkMode);
+}
+
+setInitialMode();
