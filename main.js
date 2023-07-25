@@ -29,8 +29,11 @@ function insertItem(taskText) {
     this.style.opacity = 0;
     setTimeout(() => {
       this.remove();
+      updateLocalStorage();
     }, 200);
+    updateLocalStorage();
   });
+  updateLocalStorage();
 }
 
 const isDarkMode = localStorage.getItem("darkMode") === "true" || false;
@@ -63,3 +66,21 @@ function setInitialMode() {
 }
 
 setInitialMode();
+
+function updateLocalStorage() {
+  const items = [];
+  const itemList = list.querySelectorAll(".custom-item");
+  itemList.forEach((item) => {
+    items.push(item.textContent);
+  });
+  localStorage.setItem("todoItems", JSON.stringify(items));
+}
+
+window.addEventListener("load", function () {
+  const storedItems = JSON.parse(localStorage.getItem("todoItems"));
+  if (storedItems) {
+    storedItems.forEach((item) => {
+      insertItem(item);
+    });
+  }
+});
