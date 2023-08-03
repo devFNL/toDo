@@ -11,9 +11,32 @@ body.dark-mode {
   color: #f4f4f5;
 }
 
-button {
+h1 {
+  user-select: none;
+}
+
+.btn {
   font-weight: bold;
-  border-radius: 10%;
+  border-radius: 0px;
+}
+
+.input {
+  border: 1px solid black;
+}
+
+body.dark-mode .input {
+  border: 1px solid #f4f4f5;
+  background-color: #303136;
+  color: #f4f4f5;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #ced4da;
+}
+
+body.dark-mode .input:focus {
+  border-color: #6b6b6b;
 }
 
 .list-group-item {
@@ -21,6 +44,26 @@ button {
   color: #303136;
   cursor: pointer;
   transition: opacity 0.3s ease;
+}
+
+body.dark-mode .btn {
+  border-color: #f4f4f5;
+  color: #f4f4f5;
+  background-color: transparent;
+}
+
+body.dark-mode .btn:hover {
+  background-color: #6b6b6b;
+  border-color: #6b6b6b;
+  color: white;
+}
+
+.list {
+  border-top: 2px solid #cecece;
+}
+
+.dark-mode .list {
+  border-color: #6b6b6b;
 }
 
 .dark-mode .list-group-item {
@@ -36,6 +79,7 @@ button {
 .dark-mode .list-group-item.custom-item {
   background-color: transparent;
   color: #f4f4f5;
+  border-color: #6b6b6b;
 }
 
 /* The switch - the box around the slider */

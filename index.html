@@ -11,7 +11,7 @@
     />
     <link rel="stylesheet" href="style.css" />
     <link rel="icon" href="notepadDEF.ico" type="imimage/x-icon" />
-    <title>to-Do List !</title>
+    <title>Listify</title>
   </head>
   <body>
     <div class="container text-center">
@@ -20,10 +20,22 @@
         <span class="slider"></span>
       </label>
 
-      <h1 class="display-5 m-1">to-Do List !</h1>
-      <input type="text" id="taskInput" placeholder="add a task here" />
-      <button id="button">+</button>
-      <div class="list border-top m-3" id="liste">
+      <h1 class="display-5 m-1 p-1">Listify</h1>
+
+      <div class="input-group d-flex justify-content-center">
+        <input
+          class="input text-center"
+          type="text"
+          id="taskInput"
+          placeholder="what's on your mind?"
+          aria-label="Recipient's username"
+          aria-describedby="button"
+        />
+        <button class="btn btn-outline-secondary" type="button" id="button">
+          +
+        </button>
+      </div>
+      <div class="list mx-auto m-3 w-50" id="liste">
         <ul class="list-group list-group-flush"></ul>
       </div>
     </div>
